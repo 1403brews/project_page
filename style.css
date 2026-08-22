@@ -328,7 +328,7 @@ ul.honors li::marker { color: var(--accent); }
   transform: translateY(-2px);
 }
 .card-media {
-  height: 170px;
+  height: 140px;
   background: var(--soft);
   overflow: hidden;
 }
@@ -354,15 +354,15 @@ ul.honors li::marker { color: var(--accent); }
   opacity: .55;
 }
 
-.card-body { padding: 1.1rem 1.15rem 1.25rem; display: flex; flex-direction: column; gap: .55rem; }
-.card-body h3 { font-size: 1.04rem; margin: 0; }
-.card-body p { margin: 0; font-size: .92rem; }
+.card-body { padding: .95rem 1rem 1.1rem; display: flex; flex-direction: column; gap: .55rem; }
+.card-body h3 { font-size: .99rem; margin: 0; }
+.card-body p { margin: 0; font-size: .89rem; }
 .card-body .stack { margin-top: auto; padding-top: .35rem; }
 
 /* ------------------------------ Award cards ------------------------------ */
 .awards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
   gap: 1.5rem;
 }
 .award {
@@ -380,7 +380,7 @@ a.award:hover { text-decoration: none; }
   box-shadow: 0 10px 28px rgba(0, 0, 0, .09);
   transform: translateY(-2px);
 }
-.award-media { height: 230px; background: var(--soft); overflow: hidden; }
+.award-media { height: 165px; background: var(--soft); overflow: hidden; }
 .award-media img {
   width: 100%;
   height: 100%;
@@ -390,7 +390,7 @@ a.award:hover { text-decoration: none; }
   transition: transform .3s ease;
 }
 .award:hover .award-media img { transform: scale(1.04); }
-.award-body { padding: 1.15rem 1.2rem 1.3rem; }
+.award-body { padding: .95rem 1rem 1.1rem; }
 .award-head {
   display: flex;
   align-items: flex-start;
@@ -398,7 +398,7 @@ a.award:hover { text-decoration: none; }
   gap: .7rem;
   margin-bottom: .4rem;
 }
-.award-head h3 { font-size: 1.04rem; margin: 0; flex: 1; }
+.award-head h3 { font-size: .98rem; margin: 0; flex: 1; }
 .prize {
   flex: none;
   font-size: .78rem;
@@ -410,7 +410,7 @@ a.award:hover { text-decoration: none; }
   padding: .2rem .6rem;
   white-space: nowrap;
 }
-.award-body p { margin: 0; font-size: .9rem; color: var(--muted); }
+.award-body p { margin: 0; font-size: .86rem; color: var(--muted); }
 .award-more { margin: 1.4rem 0 0; font-size: .95rem; color: var(--muted); }
 
 /* ------------------------------ Lightbox ------------------------------ */
@@ -524,7 +524,7 @@ a.award:hover { text-decoration: none; }
 
   .band { padding: 2rem 1.1rem; }
   .cards, .awards { grid-template-columns: 1fr; gap: 1.15rem; }
-  .award-media { height: 200px; }
+  .award-media { height: 170px; }
 
   ul.cv-list li { grid-template-columns: 1fr; gap: .1rem; }
   .when { padding-top: 0; }
