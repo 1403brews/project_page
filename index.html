@@ -65,26 +65,19 @@
     <!-- ABOUT -->
     <section id="about">
       <p>
-        I am a final-year undergraduate at
-        <a href="https://dtu.ac.in/" target="_blank" rel="noopener">Delhi Technological University</a>,
-        working on <strong>SLAM and state estimation, learned navigation, egocentric perception, and
-        sim-to-real manipulation</strong>. I am also Vice Captain &amp; Autonomy Lead at
-        <a href="https://www.uasdtu.in/" target="_blank" rel="noopener">UAS-DTU</a>.
+        Hi &mdash; I&rsquo;m Nishant, a final-year undergrad at
+        <a href="https://dtu.ac.in/" target="_blank" rel="noopener">Delhi Technological University</a>
+        and Autonomy Lead at <a href="https://www.uasdtu.in/" target="_blank" rel="noopener">UAS-DTU</a>.
       </p>
       <p>
-        I started in localization and mapping: degeneracy-aware LiDAR odometry, loop closure and
-        factor-graph optimization, and visual-inertial estimation for GPS-denied flight. Since then I have
-        moved toward learned navigation and embodied AI &mdash; predicting planning cost directly at
-        <strong>RRC, IIIT Hyderabad</strong>, vision-language navigation at <strong>SAIR Lab</strong>, and
-        egocentric perception and policy evaluation at <strong>FPV Labs</strong>. Alongside it I led autonomy
-        for the
-        <a href="https://www.darpa.mil/research/challenges/darpa-triage-challenge" target="_blank" rel="noopener">DARPA Triage Challenge</a>,
-        taking 2nd place in the self-funded category across two phases and <strong>$210,000</strong> in prizes.
+        I work on SLAM, learned navigation and embodied AI. Right now: egocentric perception and sim-to-real
+        manipulation at <strong>FPV Labs</strong>, and vision-language navigation at <strong>SAIR Lab</strong>.
+        Before that, LiDAR and visual odometry at <strong>RRC, IIIT Hyderabad</strong>.
       </p>
       <p>
-        A theme runs through most of it: I care about <em>whether a number means what it claims to mean</em> &mdash;
-        validating commodity pose against motion capture, holding the confounds fixed when two policy
-        checkpoints are compared, and reporting the error a reference introduces rather than hiding it.
+        I also led autonomy for the
+        <a href="https://www.darpa.mil/research/challenges/darpa-triage-challenge" target="_blank" rel="noopener">DARPA Triage Challenge</a>
+        &mdash; 2nd place, $210,000 across two phases.
       </p>
 
       <div class="badges">
@@ -101,12 +94,12 @@
     <section id="news">
       <h2>News</h2>
       <ul class="news">
-        <li><span class="date">May 2026</span> <span class="emoji">🚀</span> Joined <strong>FPV Labs</strong> (Bangalore) as a Founding Research Intern, working on egocentric pose estimation and sim-to-real manipulation.</li>
-        <li><span class="date">Apr 2026</span> <span class="emoji">📍</span> Joined <strong>SAIR Lab, University at Buffalo</strong> as a Voluntary Researcher, working on vision-language navigation for embodied AI.</li>
+        <li><span class="date">May 2026</span> <span class="emoji">🚀</span> Joined <strong>FPV Labs</strong> (Bangalore) as a Founding Research Intern.</li>
+        <li><span class="date">Apr 2026</span> <span class="emoji">📍</span> Joined <strong>SAIR Lab, University at Buffalo</strong> as a Voluntary Researcher.</li>
         <li><span class="date">2026</span> <span class="emoji">📝</span> <em>Plann3r</em> submitted to <strong>CoRL 2026</strong> (under review).</li>
-        <li><span class="date">Feb 2026</span> <span class="emoji">🧭</span> Started a research internship at <strong>RRC, IIIT Hyderabad</strong> with Prof. Sourav Garg on learned planning costs for navigation.</li>
+        <li><span class="date">Feb 2026</span> <span class="emoji">🧭</span> Started at <strong>RRC, IIIT Hyderabad</strong> with Prof. Sourav Garg.</li>
         <li><span class="date">2025</span> <span class="emoji">🎉</span> <em>DAMM-LOAM</em> accepted at the <strong>IROS 2025 Active Perception Workshop</strong>.</li>
-        <li><span class="date">2025</span> <span class="emoji">🏆</span> Won 2nd place (self-funded) at the <strong>DARPA Triage Challenge Phase-2</strong> &mdash; $150,000.</li>
+        <li><span class="date">2025</span> <span class="emoji">🏆</span> 2nd place (self-funded) at the <strong>DARPA Triage Challenge Phase-2</strong> &mdash; $150,000.</li>
       </ul>
     </section>
 
@@ -114,16 +107,12 @@
     <section id="interests">
       <h2>Research Interests</h2>
       <ul class="tags">
-        <li>LiDAR-Inertial &amp; Visual-Inertial Odometry</li>
-        <li>Degeneracy &amp; Localizability in SLAM</li>
-        <li>Loop Closure &amp; Factor-Graph Optimization</li>
-        <li>Egocentric Perception &amp; Pose Estimation</li>
-        <li>Learned Planning &amp; Costmap Prediction</li>
+        <li>SLAM &amp; State Estimation</li>
+        <li>Egocentric Perception</li>
+        <li>Learned Navigation</li>
         <li>Vision-Language Navigation</li>
-        <li>Sim-to-Real Transfer &amp; Digital Twins</li>
-        <li>Robot Policy Evaluation &amp; Benchmarking</li>
-        <li>Multi-Robot &amp; UAV Autonomy</li>
-        <li>Reinforcement Learning for Control</li>
+        <li>Sim-to-Real Transfer</li>
+        <li>Policy Evaluation &amp; Benchmarking</li>
       </ul>
     </section>
 
@@ -131,41 +120,19 @@
     <section id="vision">
       <h2>Generalizable Embodied AI, as a Full Stack</h2>
       <p>
-        Robotics is not solved, whatever the week&rsquo;s demo suggests. The standard recipe &mdash; collect
-        expert teleoperation, clone the behaviour, keep collecting until extrapolation becomes interpolation,
-        then evaluate on the same setup you trained on &mdash; produces systems that work beautifully at one
-        robot and one object, and fall over the moment anything is out of distribution. Foundation models
-        generalize broadly but have no physical grounding; embodied specialists are grounded but narrow.
-        Closing that gap is not a single model problem. It is a stack, and every layer can silently ruin the
-        one above it.
+        Robotics isn&rsquo;t solved. Demos work by collecting data until extrapolation becomes interpolation,
+        then testing on the setup they trained on. Real generalization is a stack problem &mdash; and every
+        layer can quietly ruin the one above it.
       </p>
       <ol class="stack-list">
-        <li>
-          <strong>Data you can actually get.</strong> Scale is gated by hardware most contributors will never
-          own. Commodity capture &mdash; a phone people already carry &mdash; changes what is collectible, but
-          only if its pose is good enough to trust, which is a measurement question, not an assumption.
-        </li>
-        <li>
-          <strong>Grounding that holds.</strong> Everything downstream &mdash; hand tracking, depth, scene
-          reconstruction &mdash; rests on knowing where the camera was. Pose error propagates into every label
-          derived from it, so a quiet scale drift corrupts a dataset without ever looking wrong.
-        </li>
-        <li>
-          <strong>Simulation as a multiplier, not a diorama.</strong> Hand-built scenes go stale the moment
-          the workspace changes. Reconstructing a real workspace and amplifying a handful of demonstrations
-          inside it is worth doing only if a policy&rsquo;s score there predicts its score on the real robot.
-        </li>
-        <li>
-          <strong>Evaluation that can be believed.</strong> The failure mode of a general system is confident
-          wrongness, and the failure mode of a benchmark is an uncontrolled confound. If two checkpoints meet
-          different layouts, lighting, or framing, the difference between them is not the checkpoints.
-        </li>
+        <li><strong>Data you can actually get.</strong> Scale is gated by hardware most people will never own.</li>
+        <li><strong>Grounding that holds.</strong> Everything downstream rests on knowing where the camera was.</li>
+        <li><strong>Simulation as a multiplier.</strong> Worth building only if the sim score predicts the real one.</li>
+        <li><strong>Evaluation you can believe.</strong> Change the layout between two checkpoints and you are no longer comparing checkpoints.</li>
       </ol>
       <p>
-        My bet is that generalization is engineered as much as it is trained &mdash; measure the body rather
-        than memorize it, drop the quantities that do not transfer, and treat agreement between independent
-        channels as the calibration signal. Which makes the honest headline metric the <em>drop</em> across
-        embodiments and domains, not the peak score on the domain you tuned for.
+        My bet: generalization is engineered as much as it is trained. Which makes the honest metric the
+        <em>drop</em> across embodiments and domains, not the peak score on the one you tuned for.
       </p>
     </section>
 
@@ -177,7 +144,7 @@
         <h3>Plann3r: Predicting Planning Costs Grounded in 3D</h3>
         <p class="authors"><strong>Nishant Chandna</strong>, et al.</p>
         <p class="venue"><em>CoRL 2026</em> &mdash; Under Review</p>
-        <p class="desc">A 3D-grounded method that predicts pixel-level planning cost for an arbitrary set of images and subgoal pixel, coupling learned cost-map prediction with control-conditioned planning to outperform connectivity-based search planners across diverse navigation tasks.</p>
+        <p class="desc">Predicts pixel-level planning cost directly, beating connectivity-based search planners across navigation tasks.</p>
         <p class="entry-links"><span class="pill">Under Review</span></p>
       </div>
 
@@ -185,7 +152,7 @@
         <h3>DAMM-LOAM: Degeneracy-Aware Multi-Metric LiDAR Odometry and Mapping</h3>
         <p class="authors"><strong>Nishant Chandna</strong>, et al.</p>
         <p class="venue"><em>IROS 2025 Active Perception Workshop</em></p>
-        <p class="desc">A framework that improves pose estimation in challenging, low-feature environments such as corridors, outperforming state-of-the-art LOAM methods in both degenerate and outdoor scenarios.</p>
+        <p class="desc">Improves pose estimation where geometry stops constraining it &mdash; corridors, tunnels &mdash; beating state-of-the-art LOAM methods.</p>
         <p class="entry-links"><a class="pill pill-link" href="https://arxiv.org/abs/2510.13287" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> arXiv</a></p>
       </div>
 
@@ -193,7 +160,7 @@
         <h3>Autonomous UAV Navigation and Mapping for Accurate Fruit Detection and Counting</h3>
         <p class="authors"><strong>Nishant Chandna</strong>, et al.</p>
         <p class="venue"><em>International Conference on Unmanned Aircraft Systems (ICUAS) 2025</em></p>
-        <p class="desc">A UAV fruit-counting framework combining YOLOv8 detection, LiDAR-camera 3D mapping, and TSP-A* path planning &mdash; 98% accuracy in simulation, 90% in the real world; 2nd (simulation) and 3rd (overall) at the ICUAS&rsquo;24 UAV Competition.</p>
+        <p class="desc">YOLOv8 detection, LiDAR-camera 3D mapping and TSP-A* planning &mdash; 98% accuracy in simulation, 90% in the real world.</p>
         <p class="entry-links"><a class="pill pill-link" href="https://ieeexplore.ieee.org/document/11007888" target="_blank" rel="noopener"><i class="fa-solid fa-up-right-from-square"></i> IEEE Xplore</a></p>
       </div>
     </section>
@@ -211,7 +178,7 @@
           </div>
           <div class="card-body">
             <h3>DAMM-LOAM &mdash; Degeneracy-Aware LiDAR Odometry</h3>
-            <p>Improves LiDAR SLAM in degenerate environments such as corridors and tunnels, using normal-image feature classification and degeneracy-aware adaptive weighting, plus Scan-Context loop closure and factor-graph optimization for global consistency.</p>
+            <p>LiDAR SLAM for corridors and tunnels: degeneracy-aware weighting, Scan-Context loop closure, factor-graph optimization.</p>
             <p class="stack"><span>C++</span><span>Python</span><span>LIO</span><span>SLAM</span><span>GTSAM</span></p>
           </div>
         </article>
@@ -222,7 +189,7 @@
           </div>
           <div class="card-body">
             <h3>FairEval SO-101 &mdash; Honest Policy Evaluation</h3>
-            <p>An evaluation harness that makes two real-robot policy checkpoints actually comparable: every checkpoint faces the same counterbalanced object layouts in the same order, restaged against the reference frames the first run captured. Paired with mechanism-scoped perturbations &mdash; defocus, illumination, framing &mdash; held at fixed severity, turning a score into a curve.</p>
+            <p>Makes two policy checkpoints genuinely comparable &mdash; same counterbalanced layouts, same order, restaged against reference frames. Perturbations at fixed severity turn a score into a curve.</p>
             <p class="stack"><span>LeRobot</span><span>PyTorch</span><span>OpenCV</span><span>Next.js</span><span>SO-101</span></p>
           </div>
         </article>
@@ -233,7 +200,7 @@
           </div>
           <div class="card-body">
             <h3>Drone-based Forest Mapping</h3>
-            <p>Deployed a PX4 UAV in a simulated forest in Gazebo; implemented mapping with GenZ-ICP and benchmarked against KISS-ICP, then fused ICP with GPS and IMU using dynamic confidence-based weighting for robust state estimation.</p>
+            <p>PX4 UAV mapping a simulated forest with GenZ-ICP, benchmarked against KISS-ICP, fused with GPS and IMU under confidence-based weighting.</p>
             <p class="stack"><span>C++</span><span>Python</span><span>Bash</span><span>PX4</span><span>ROS</span></p>
           </div>
         </article>
@@ -244,7 +211,7 @@
           </div>
           <div class="card-body">
             <h3>Collision Avoidance with EGO-Planner &amp; VINS-Mono</h3>
-            <p>GPS-denied autonomous navigation and collision avoidance indoors, using VINS-Mono for visual-inertial state estimation and EGO-Planner for real-time local trajectory generation on a lightweight quadrotor &mdash; agile, high-speed obstacle avoidance in cluttered 3D spaces.</p>
+            <p>GPS-denied indoor flight on a lightweight quadrotor &mdash; VINS-Mono for state estimation, EGO-Planner for real-time trajectories.</p>
             <p class="stack"><span>C++</span><span>VIO</span><span>PX4</span><span>ROS</span></p>
           </div>
         </article>
@@ -255,7 +222,7 @@
           </div>
           <div class="card-body">
             <h3>Reward-Function Improvement in PyFlyt (RL for UAVs)</h3>
-            <p>Enhanced an open RL environment&rsquo;s reward function with a penalty on the rate of change of orientation across previous time steps, improving drone stability in hovering and pole-balancing and accelerating convergence.</p>
+            <p>Added a penalty on orientation rate-of-change to an open RL environment, improving hover stability and convergence speed.</p>
             <p class="stack"><span>Python</span><span>RL</span><span>Stable-Baselines3</span><span>Gymnasium</span></p>
           </div>
         </article>
@@ -266,7 +233,7 @@
           </div>
           <div class="card-body">
             <h3>UAV Fruit Detection &amp; Counting &mdash; ICUAS&rsquo;24</h3>
-            <p>Autonomous greenhouse navigation and fruit counting combining YOLOv8 detection, LiDAR-camera 3D mapping, and TSP-A* path planning &mdash; 98% accuracy in simulation and 90% in real-world testing.</p>
+            <p>Autonomous greenhouse navigation and fruit counting &mdash; YOLOv8, LiDAR-camera mapping, TSP-A* planning.</p>
             <p class="stack"><span>Python</span><span>ROS</span><span>YOLOv8</span><span>Gazebo</span><span>ArduPilot</span></p>
           </div>
         </article>
@@ -277,7 +244,7 @@
           </div>
           <div class="card-body">
             <h3>DARPA Triage Challenge &mdash; Autonomy Stack</h3>
-            <p>End-to-end autonomy for coordinated multi-robot triage across ground and aerial platforms &mdash; navigation, exploration, and decision-making in unknown, dynamic environments. 2nd place (self-funded) across Phase-1 and Phase-2; the only Asian and undergraduate team to qualify.</p>
+            <p>Multi-robot triage across ground and aerial platforms in unknown environments. 2nd place across both phases; the only Asian and undergraduate team to qualify.</p>
             <p class="stack"><span>C++</span><span>Python</span><span>ROS</span><span>PX4</span><span>Perception</span></p>
           </div>
         </article>
@@ -292,11 +259,11 @@
     <section id="experience">
       <h2>Experience</h2>
       <ul class="cv-list">
-        <li><span class="when">May 2026 &ndash; Present</span><span class="role"><strong>Founding Research Intern</strong>, FPV Labs, Bangalore<br /><span class="sub">Egocentric pose and SLAM &mdash; ARKit validated against a 30-camera Vicon rig, a Python ATE/RPE benchmarking suite, and a Kalibr-calibrated stereo-inertial estimator. Sim-to-real manipulation: phone video to a physics-ready simulation replica, and synthetic demonstration amplification.</span></span></li>
-        <li><span class="when">Apr 2026 &ndash; Present</span><span class="role"><strong>Voluntary Researcher</strong>, SAIR Lab, University at Buffalo<br /><span class="sub">Integrating the lab&rsquo;s vision-language navigation stack with OmniNavBench &mdash; the policy-server bridge, ground-truth odometry and depth-projected scans, and an audit of which navigation skills the stack can actually be scored on.</span></span></li>
-        <li><span class="when">Feb 2026 &ndash; May 2026</span><span class="role"><strong>Research Intern</strong>, RRC, IIIT Hyderabad &mdash; Prof. Sourav Garg<br /><span class="sub">Plann3r: replacing a pixel-graph and Dijkstra planner with a learned goal-conditioned costmap predictor over a frozen 3D-reconstruction backbone.</span></span></li>
-        <li><span class="when">May 2025 &ndash; Jul 2025</span><span class="role"><strong>Research Intern</strong>, RRC, IIIT Hyderabad &mdash; Prof. Madhava Krishna<br /><span class="sub">Degeneracy awareness and Scan-Context loop closure in ICP/LOAM; reduced global drift by 40%.</span></span></li>
-        <li><span class="when">Aug 2023 &ndash; Present</span><span class="role"><strong>Vice Captain &amp; Autonomy Lead</strong>, UAS-DTU<br /><span class="sub">Led autonomy for the DARPA Triage Challenge; multi-robot ground/aerial perception, planning &amp; control.</span></span></li>
+        <li><span class="when">May 2026 &ndash; Present</span><span class="role"><strong>Founding Research Intern</strong>, FPV Labs, Bangalore<br /><span class="sub">Egocentric pose and SLAM benchmarking; a stereo-inertial estimator accurate to ~1&nbsp;cm. Sim-to-real manipulation and policy evaluation.</span></span></li>
+        <li><span class="when">Apr 2026 &ndash; Present</span><span class="role"><strong>Voluntary Researcher</strong>, SAIR Lab, University at Buffalo<br /><span class="sub">Integrating the lab&rsquo;s vision-language navigation stack with OmniNavBench, and auditing which skills can actually be scored.</span></span></li>
+        <li><span class="when">Feb 2026 &ndash; May 2026</span><span class="role"><strong>Research Intern</strong>, RRC, IIIT Hyderabad &mdash; Prof. Sourav Garg<br /><span class="sub">Plann3r &mdash; a learned goal-conditioned costmap predictor replacing pixel-graph search.</span></span></li>
+        <li><span class="when">May 2025 &ndash; Jul 2025</span><span class="role"><strong>Research Intern</strong>, RRC, IIIT Hyderabad &mdash; Prof. Madhava Krishna<br /><span class="sub">Degeneracy awareness and Scan-Context loop closure in ICP/LOAM; 40% less global drift.</span></span></li>
+        <li><span class="when">Aug 2023 &ndash; Present</span><span class="role"><strong>Vice Captain &amp; Autonomy Lead</strong>, UAS-DTU<br /><span class="sub">Led autonomy for the DARPA Triage Challenge &mdash; multi-robot ground and aerial systems.</span></span></li>
       </ul>
     </section>
   </main>
@@ -314,7 +281,7 @@
               <h3>DARPA Triage Challenge Phase-2</h3>
               <span class="prize">$150,000</span>
             </div>
-            <p>2nd Position, self-funded category &mdash; Defense Advanced Research Projects Agency.</p>
+            <p>2nd Position, self-funded category.</p>
           </div>
         </a>
 
@@ -325,7 +292,7 @@
               <h3>DARPA Triage Challenge Phase-1</h3>
               <span class="prize">$60,000</span>
             </div>
-            <p>2nd Position, self-funded category &mdash; the only Asian and undergraduate team to qualify.</p>
+            <p>2nd Position &mdash; the only Asian and undergraduate team to qualify.</p>
           </div>
         </a>
 
@@ -336,7 +303,7 @@
               <h3>ICUAS 2024 UAV Competition</h3>
               <span class="prize">2nd &amp; 3rd</span>
             </div>
-            <p>2nd in the simulation stage and 3rd overall &mdash; International Conference on Unmanned Aircraft Systems.</p>
+            <p>2nd in the simulation stage, 3rd overall.</p>
           </div>
         </div>
 
@@ -369,9 +336,9 @@
     <!-- CONTACT -->
     <section id="contact">
       <h2>Contact</h2>
-      <p>The fastest way to reach me is by email &mdash;
+      <p>Email is fastest &mdash;
         <a href="mailto:chandna.nishant@gmail.com">chandna.nishant@gmail.com</a>.
-        I&rsquo;m always glad to talk about robotics, autonomy, and research collaborations.</p>
+        Always glad to talk robotics.</p>
     </section>
 
   </main>
