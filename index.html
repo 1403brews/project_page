@@ -4,18 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nishant Chandna</title>
-  <meta name="description" content="Nishant Chandna — robotics researcher working on SLAM, egocentric perception, sim-to-real manipulation, and embodied AI." />
+  <meta name="description" content="Nishant Chandna — robotics researcher working on SLAM and state estimation, learned navigation, egocentric perception, and sim-to-real manipulation." />
   <meta name="author" content="Nishant Chandna" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Nishant Chandna" />
-  <meta property="og:description" content="Robotics researcher — SLAM, egocentric perception, sim-to-real manipulation, and embodied AI." />
+  <meta property="og:description" content="Robotics researcher — SLAM and state estimation, learned navigation, egocentric perception, and sim-to-real manipulation." />
   <meta property="og:url" content="https://1403brews.github.io/project_page/" />
   <meta property="og:image" content="https://1403brews.github.io/project_page/assets/profile.jpg" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Nishant Chandna" />
-  <meta name="twitter:description" content="Robotics researcher — SLAM, egocentric perception, sim-to-real manipulation, and embodied AI." />
+  <meta name="twitter:description" content="Robotics researcher — SLAM and state estimation, learned navigation, egocentric perception, and sim-to-real manipulation." />
   <meta name="twitter:image" content="https://1403brews.github.io/project_page/assets/profile.jpg" />
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230085A1'/%3E%3Ctext x='50%25' y='53%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='30' fill='white'%3ENC%3C/text%3E%3C/svg%3E" />
@@ -55,7 +55,7 @@
   <header class="intro" id="top">
     <img class="avatar" src="assets/profile.jpg" alt="Nishant Chandna" />
     <h1>Nishant Chandna</h1>
-    <p class="tagline">Robotics Researcher &middot; SLAM, Egocentric Perception &amp; Embodied AI</p>
+    <p class="tagline">Robotics Researcher &middot; SLAM &amp; State Estimation, Learned Navigation, Embodied AI</p>
   </header>
 
   <!-- ============================== CONTENT ============================== -->
@@ -64,19 +64,46 @@
     <!-- ABOUT -->
     <section id="about">
       <p>
-        I am a robotics researcher working on <strong>SLAM, egocentric perception, and sim-to-real
-        manipulation</strong> &mdash; building perception, planning, and evaluation systems that let robots
-        navigate, explore, and act in unknown and dynamic environments. I am an undergraduate at
+        I am a robotics researcher working across the stack that lets a robot figure out where it is, decide
+        where to go, and be honestly measured when it gets there &mdash; <strong>SLAM and state estimation,
+        learned navigation, egocentric perception, and sim-to-real manipulation</strong>. I am an
+        undergraduate at
         <a href="https://dtu.ac.in/" target="_blank" rel="noopener">Delhi Technological University</a>
         and Vice Captain &amp; Autonomy Lead at <a href="https://www.uasdtu.in/" target="_blank" rel="noopener">UAS-DTU</a>.
       </p>
       <p>
-        I led the autonomy stack for the
+        Most of my work has been in <strong>localization and mapping</strong>. I built DAMM-LOAM, a
+        degeneracy-aware LiDAR odometry framework for corridors and tunnels where the geometry stops
+        constraining the solution, and added Scan-Context place recognition and factor-graph optimization to
+        state-of-the-art ICP pipelines to close loops and cut global drift by 40%. On the visual side I have
+        worked with VINS-Mono and EGO-Planner for GPS-denied flight, fused ICP with GPS and IMU under
+        confidence-based weighting for forest mapping, and run full camera&ndash;IMU calibration in Kalibr.
+      </p>
+      <p>
+        From there the work moved toward <strong>navigation that is learned rather than searched</strong>. At
+        the Robotics Research Center, IIIT Hyderabad I developed Plann3r, which replaces a pixel graph and
+        Dijkstra planner with a goal-conditioned network that predicts planning cost directly over a frozen
+        3D-reconstruction backbone. At <strong>SAIR Lab</strong> (University at Buffalo) I work on
+        vision-language navigation, integrating the lab&rsquo;s stack with a cross-embodiment benchmark and
+        auditing which of its navigation skills can actually be scored.
+      </p>
+      <p>
+        At <strong>FPV Labs</strong> I work on <strong>egocentric perception and manipulation</strong>:
+        validating commodity phone tracking against a 30-camera motion-capture rig, building the benchmarking
+        suite that compares classical and feed-forward SLAM on egocentric footage, and shipping a
+        stereo-inertial pose estimator accurate to about a centimetre. The other half is manipulation &mdash;
+        turning a short phone video into a physics-ready simulation replica, amplifying a handful of
+        teleoperated demonstrations into thousands, and building the harness that makes two policy checkpoints
+        genuinely comparable.
+      </p>
+      <p>
+        Alongside that I led autonomy for the
         <a href="https://www.darpa.mil/research/challenges/darpa-triage-challenge" target="_blank" rel="noopener">DARPA Triage Challenge</a>
-        (2nd place, self-funded category, across two phases &mdash; <strong>$210,000</strong> in prizes).
-        Since then I have worked as a research intern at the Robotics Research Center, IIIT Hyderabad, and
-        currently with <strong>FPV Labs</strong> on egocentric pose estimation and sim-to-real manipulation, and
-        with <strong>SAIR Lab</strong> (University at Buffalo) on vision-language navigation.
+        &mdash; multi-robot ground and aerial coordination in unknown, dynamic environments, 2nd place in the
+        self-funded category across two phases and <strong>$210,000</strong> in prizes, as the only Asian and
+        undergraduate team to qualify. I have also placed at the ICUAS UAV competition with a YOLOv8 and
+        LiDAR-camera fruit-counting system, and contributed reward shaping to an open reinforcement-learning
+        environment for UAV control.
       </p>
       <p>
         A theme runs through most of it: I care about <em>whether a number means what it claims to mean</em> &mdash;
@@ -111,12 +138,16 @@
     <section id="interests">
       <h2>Research Interests</h2>
       <ul class="tags">
-        <li>SLAM (LiDAR-Inertial &amp; Visual-Inertial Odometry)</li>
+        <li>LiDAR-Inertial &amp; Visual-Inertial Odometry</li>
+        <li>Degeneracy &amp; Localizability in SLAM</li>
+        <li>Loop Closure &amp; Factor-Graph Optimization</li>
         <li>Egocentric Perception &amp; Pose Estimation</li>
-        <li>Sensor Fusion &amp; State Estimation</li>
-        <li>Sim-to-Real Transfer &amp; Policy Evaluation</li>
+        <li>Learned Planning &amp; Costmap Prediction</li>
         <li>Vision-Language Navigation</li>
+        <li>Sim-to-Real Transfer &amp; Digital Twins</li>
+        <li>Robot Policy Evaluation &amp; Benchmarking</li>
         <li>Multi-Robot &amp; UAV Autonomy</li>
+        <li>Reinforcement Learning for Control</li>
       </ul>
     </section>
 
