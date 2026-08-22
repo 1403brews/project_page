@@ -162,6 +162,7 @@ h3 { font-size: 1.12rem; font-weight: 600; margin: 0 0 .25rem; }
 .badge-linkedin { background: #0A66C2; }
 .badge-github   { background: #24292f; }
 .badge-email    { background: #ea4335; }
+.badge-x        { background: #000000; }
 .badge-scholar  { background: #4285F4; }
 .badge-cv       { background: var(--accent); }
 
