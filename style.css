@@ -323,6 +323,7 @@ ul.honors li::marker { color: var(--accent); }
   overflow: hidden;
   transition: box-shadow .2s ease, transform .2s ease;
 }
+.card.is-clickable { cursor: zoom-in; }
 .card:hover {
   box-shadow: 0 10px 28px rgba(0, 0, 0, .09);
   transform: translateY(-2px);
@@ -425,12 +426,15 @@ a.award:hover { text-decoration: none; }
   cursor: zoom-out;
 }
 .lightbox[hidden] { display: none; }
-.lightbox img {
+.lightbox img,
+.lightbox video {
   max-width: 100%;
   max-height: 100%;
   border-radius: 6px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, .5);
 }
+.lightbox video { cursor: default; width: min(1100px, 100%); background: #000; }
+.lightbox img[hidden], .lightbox video[hidden] { display: none; }
 .lightbox-close {
   position: absolute;
   top: 1rem; right: 1.4rem;

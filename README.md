@@ -8,9 +8,10 @@ accent, top navbar, centered photo header, and a footer with social icons.
 
 Prose sits in a narrow reading column; Projects and Honors break out into
 full-width bands, because a grid of media needs room that prose does not.
-Project cards play their video while it is on screen — visibility rather than
-hover, because phones have no hover and would otherwise show a black frame.
-Award photos open in a lightbox.
+Project cards play their video while it is on screen (visibility rather than
+hover, because phones have no hover and would otherwise show a black frame).
+Clicking a card opens its video large with controls; award photos open the
+same way.
 
 ## Files
 
