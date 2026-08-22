@@ -42,6 +42,7 @@
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#news">News</a>
+        <a href="#vision">Vision</a>
         <a href="#publications">Publications</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
@@ -124,6 +125,48 @@
         <li>Multi-Robot &amp; UAV Autonomy</li>
         <li>Reinforcement Learning for Control</li>
       </ul>
+    </section>
+
+    <!-- RESEARCH VISION -->
+    <section id="vision">
+      <h2>Generalizable Embodied AI, as a Full Stack</h2>
+      <p>
+        Robotics is not solved, whatever the week&rsquo;s demo suggests. The standard recipe &mdash; collect
+        expert teleoperation, clone the behaviour, keep collecting until extrapolation becomes interpolation,
+        then evaluate on the same setup you trained on &mdash; produces systems that work beautifully at one
+        robot and one object, and fall over the moment anything is out of distribution. Foundation models
+        generalize broadly but have no physical grounding; embodied specialists are grounded but narrow.
+        Closing that gap is not a single model problem. It is a stack, and every layer can silently ruin the
+        one above it.
+      </p>
+      <ol class="stack-list">
+        <li>
+          <strong>Data you can actually get.</strong> Scale is gated by hardware most contributors will never
+          own. Commodity capture &mdash; a phone people already carry &mdash; changes what is collectible, but
+          only if its pose is good enough to trust, which is a measurement question, not an assumption.
+        </li>
+        <li>
+          <strong>Grounding that holds.</strong> Everything downstream &mdash; hand tracking, depth, scene
+          reconstruction &mdash; rests on knowing where the camera was. Pose error propagates into every label
+          derived from it, so a quiet scale drift corrupts a dataset without ever looking wrong.
+        </li>
+        <li>
+          <strong>Simulation as a multiplier, not a diorama.</strong> Hand-built scenes go stale the moment
+          the workspace changes. Reconstructing a real workspace and amplifying a handful of demonstrations
+          inside it is worth doing only if a policy&rsquo;s score there predicts its score on the real robot.
+        </li>
+        <li>
+          <strong>Evaluation that can be believed.</strong> The failure mode of a general system is confident
+          wrongness, and the failure mode of a benchmark is an uncontrolled confound. If two checkpoints meet
+          different layouts, lighting, or framing, the difference between them is not the checkpoints.
+        </li>
+      </ol>
+      <p>
+        My bet is that generalization is engineered as much as it is trained &mdash; measure the body rather
+        than memorize it, drop the quantities that do not transfer, and treat agreement between independent
+        channels as the calibration signal. Which makes the honest headline metric the <em>drop</em> across
+        embodiments and domains, not the peak score on the domain you tuned for.
+      </p>
     </section>
 
     <!-- PUBLICATIONS -->

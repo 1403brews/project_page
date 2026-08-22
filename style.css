@@ -197,6 +197,38 @@ ul.tags li {
   color: var(--heading);
 }
 
+/* ------------------------------ Numbered stack list ------------------------------ */
+ol.stack-list {
+  list-style: none;
+  counter-reset: layer;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+ol.stack-list li {
+  counter-increment: layer;
+  position: relative;
+  padding: .55rem 0 .55rem 2.5rem;
+  font-size: .96rem;
+  border-bottom: 1px solid var(--rule);
+}
+ol.stack-list li:last-child { border-bottom: none; }
+ol.stack-list li::before {
+  content: counter(layer);
+  position: absolute;
+  left: 0;
+  top: .6rem;
+  width: 1.65rem;
+  height: 1.65rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--soft);
+  border: 1px solid var(--rule);
+  color: var(--accent);
+  font-size: .78rem;
+  font-weight: 700;
+}
+
 /* ------------------------------ Entries (pubs + projects) ------------------------------ */
 .entry {
   padding: 1.05rem 0;
