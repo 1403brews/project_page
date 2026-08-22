@@ -354,9 +354,10 @@
   </footer>
 
   <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Media viewer" hidden>
     <button class="lightbox-close" aria-label="Close">&times;</button>
-    <img src="" alt="" />
+    <img src="" alt="" hidden />
+    <video src="" controls playsinline hidden></video>
   </div>
 
   <script>
@@ -398,24 +399,49 @@
       vids.forEach(function (v) { v.pause(); v.controls = true; });
     }
 
-    // Click any award photo to see it full size.
+    // One viewer for both kinds of media. Award photos open full size; a
+    // project card opens its video large, with controls, played from the start.
     var lb = document.getElementById('lightbox');
     var lbImg = lb.querySelector('img');
-    document.querySelectorAll('.award-media img').forEach(function (img) {
-      img.addEventListener('click', function (e) {
-        e.preventDefault();
-        lbImg.src = img.src;
-        lbImg.alt = img.alt;
-        lb.hidden = false;
-        document.body.style.overflow = 'hidden';
-      });
-    });
+    var lbVid = lb.querySelector('video');
+
+    function openImage(src, alt) {
+      lbVid.pause(); lbVid.removeAttribute('src'); lbVid.hidden = true;
+      lbImg.src = src; lbImg.alt = alt || ''; lbImg.hidden = false;
+      show();
+    }
+    function openVideo(src, label) {
+      lbImg.hidden = true; lbImg.removeAttribute('src');
+      lbVid.src = src; lbVid.setAttribute('aria-label', label || '');
+      lbVid.hidden = false; lbVid.currentTime = 0;
+      show();
+      lbVid.play().catch(function () {});
+    }
+    function show() { lb.hidden = false; document.body.style.overflow = 'hidden'; }
     function closeLightbox() {
       lb.hidden = true;
-      lbImg.src = '';
+      lbImg.hidden = true; lbImg.removeAttribute('src');
+      lbVid.pause(); lbVid.hidden = true; lbVid.removeAttribute('src');
       document.body.style.overflow = '';
     }
-    lb.addEventListener('click', closeLightbox);
+
+    document.querySelectorAll('.award-media img').forEach(function (img) {
+      img.addEventListener('click', function (e) { e.preventDefault(); openImage(img.src, img.alt); });
+    });
+
+    document.querySelectorAll('.card').forEach(function (card) {
+      var v = card.querySelector('.card-media video');
+      var i = card.querySelector('.card-media img');
+      if (!v && !i) return;
+      card.classList.add('is-clickable');
+      card.addEventListener('click', function () {
+        if (v) { openVideo(v.getAttribute('src'), v.getAttribute('aria-label')); }
+        else { openImage(i.src, i.alt); }
+      });
+    });
+
+    // A click on the video itself should reach its controls, not close the viewer.
+    lb.addEventListener('click', function (e) { if (e.target !== lbVid) closeLightbox(); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !lb.hidden) closeLightbox(); });
   </script>
 </body>
