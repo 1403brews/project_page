@@ -8,7 +8,9 @@ accent, top navbar, centered photo header, and a footer with social icons.
 
 Prose sits in a narrow reading column; Projects and Honors break out into
 full-width bands, because a grid of media needs room that prose does not.
-Project cards play their video on hover, and award photos open in a lightbox.
+Project cards play their video while it is on screen — visibility rather than
+hover, because phones have no hover and would otherwise show a black frame.
+Award photos open in a lightbox.
 
 ## Files
 
@@ -16,7 +18,7 @@ Project cards play their video on hover, and award photos open in a lightbox.
 - `style.css` — styling
 - `assets/profile.jpg` — profile photo (header avatar)
 - `assets/Nishant_Resume.pdf` — CV, linked from the page
-- `assets/media/` — project and award media (photos, one demo video, one GIF)
+- `assets/media/` — project and award media (five demo videos, a GIF, and award photos)
 
 Fonts (Google Fonts: Lora + Open Sans) and icons (Font Awesome) load from CDNs.
 
@@ -39,9 +41,10 @@ Works as-is on any static host:
 
 - **Profile photo:** replace `assets/profile.jpg` (square image recommended).
 - **Project / award media:** drop files in `assets/media/` and point the
-  corresponding `<img>`/`<video>` at them. A project with no footage uses the
-  `card-media-plain` treatment (a tinted panel with a Font Awesome glyph)
-  instead of leaving an empty box.
+  corresponding `<img>`/`<video>` at them. Videos are H.264, scaled to 960px
+  wide and stripped of audio, which keeps each one a few MB rather than tens.
+  A project with no footage can use the `card-media-plain` treatment (a tinted
+  panel with a Font Awesome glyph) instead of leaving an empty box.
 - **Content:** all text lives directly in `index.html` under clearly-labelled
   sections (About, News, Publications, Projects, Experience, Honors, Education).
 - **Accent colour / fonts:** edit the CSS variables at the top of `style.css`.

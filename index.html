@@ -168,8 +168,8 @@
         </article>
 
         <article class="card">
-          <div class="card-media card-media-plain">
-            <div class="card-glyph"><i class="fa-solid fa-ruler-combined"></i></div>
+          <div class="card-media">
+            <video src="assets/media/faireval.mp4" muted loop playsinline preload="metadata" aria-label="FairEval SO-101 scored evaluation run"></video>
           </div>
           <div class="card-body">
             <h3>FairEval SO-101 &mdash; Honest Policy Evaluation</h3>
@@ -180,7 +180,7 @@
 
         <article class="card">
           <div class="card-media">
-            <img src="assets/media/forest-mapping.jpg" alt="Drone-based forest mapping" loading="lazy" />
+            <video src="assets/media/forest-mapping.mp4" muted loop playsinline preload="metadata" aria-label="Drone-based forest mapping"></video>
           </div>
           <div class="card-body">
             <h3>Drone-based Forest Mapping</h3>
@@ -191,7 +191,7 @@
 
         <article class="card">
           <div class="card-media">
-            <img src="assets/media/collision-avoidance.jpg" alt="Indoor collision avoidance" loading="lazy" />
+            <video src="assets/media/collision-avoidance.mp4" muted loop playsinline preload="metadata" aria-label="Indoor collision avoidance"></video>
           </div>
           <div class="card-body">
             <h3>Collision Avoidance with EGO-Planner &amp; VINS-Mono</h3>
@@ -213,7 +213,7 @@
 
         <article class="card">
           <div class="card-media">
-            <img src="assets/media/fruit-detection.jpg" alt="UAV fruit detection in a greenhouse" loading="lazy" />
+            <video src="assets/media/fruit-detection.mp4" muted loop playsinline preload="metadata" aria-label="UAV fruit detection in a greenhouse"></video>
           </div>
           <div class="card-body">
             <h3>UAV Fruit Detection &amp; Counting &mdash; ICUAS&rsquo;24</h3>
@@ -359,13 +359,30 @@
       if (e.target.tagName === 'A') { links.classList.remove('open'); toggle.setAttribute('aria-expanded', false); }
     });
 
-    // Play project videos on hover, pause when they leave. Muted + playsinline
-    // so autoplay policies allow it; a failed play() is not worth reporting.
-    document.querySelectorAll('.card-media video').forEach(function (v) {
-      var card = v.closest('.card');
-      card.addEventListener('mouseenter', function () { v.play().catch(function () {}); });
-      card.addEventListener('mouseleave', function () { v.pause(); v.currentTime = 0; });
-    });
+    // Play a project video while it is on screen, pause it when it is not.
+    // Hover would strand touch users on a black frame, since phones have no
+    // hover; visibility is the condition that works on every device. Muted +
+    // playsinline so autoplay policies allow it, and a browser that refuses
+    // play() still shows the poster frame rather than an error.
+    var vids = document.querySelectorAll('.card-media video');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          var v = e.target;
+          if (e.isIntersecting) { v.play().catch(function () {}); }
+          else { v.pause(); }
+        });
+      }, { threshold: 0.35 });
+      vids.forEach(function (v) { io.observe(v); });
+    } else {
+      vids.forEach(function (v) { v.play().catch(function () {}); });
+    }
+
+    // Someone who asked for less motion should not be handed five looping
+    // videos; give them the first frame and a control to start it themselves.
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      vids.forEach(function (v) { v.pause(); v.controls = true; });
+    }
 
     // Click any award photo to see it full size.
     var lb = document.getElementById('lightbox');
