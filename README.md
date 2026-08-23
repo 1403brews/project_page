@@ -49,3 +49,22 @@ Works as-is on any static host:
 - **Content:** all text lives directly in `index.html` under clearly-labelled
   sections (About, News, Publications, Projects, Experience, Honors, Education).
 - **Accent colour / fonts:** edit the CSS variables at the top of `style.css`.
+
+## Analytics
+
+GitHub Pages serves the site with no analytics of its own, and GitHub's repo
+traffic API (`Insights > Traffic`) counts views of the *repository* on
+github.com, keeps only 14 days, and has no geography data at all — there is no
+`traffic/countries` endpoint.
+
+For visitor counts and countries on the actual site, `index.html` carries a
+commented-out **Cloudflare Web Analytics** beacon. It is cookieless and free.
+To turn it on:
+
+1. dash.cloudflare.com → Analytics & Logs → Web Analytics → **Add a site**
+2. Enter `1403brews.github.io` and copy the token it issues
+3. In `index.html`, replace `PASTE_TOKEN_HERE` with that token and uncomment
+   the `<script>` block
+4. Commit and push; the dashboard starts filling within a few minutes
+
+Reports live in the Cloudflare dashboard, not on the page.
