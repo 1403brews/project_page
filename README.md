@@ -6,8 +6,10 @@ experience, honors, and education. Plain static HTML/CSS — no build step.
 Styled after the Beautiful Jekyll aesthetic — Lora/Open Sans typography, teal
 accent, top navbar, centered photo header, and a footer with social icons.
 
-Prose sits in a narrow reading column; Projects and Honors break out into
-full-width bands, because a grid of media needs room that prose does not.
+Sections run About, News, Achievements, Publications, Projects, Experience,
+Education, Contact. Prose sits in a narrow reading column; Achievements and
+Projects break out into full-width bands, because a grid of media needs room
+that prose does not.
 Project cards play their video while it is on screen (visibility rather than
 hover, because phones have no hover and would otherwise show a black frame).
 Clicking a card opens its video large with controls; award photos open the
@@ -19,7 +21,7 @@ same way.
 - `style.css` — styling
 - `assets/profile.jpg` — profile photo (header avatar)
 - `assets/Nishant_Resume.pdf` — CV, linked from the page
-- `assets/media/` — project and award media (five demo videos, a GIF, and award photos)
+- `assets/media/` — project and award media (demo videos, a GIF, stills, and award photos)
 
 Fonts (Google Fonts: Lora + Open Sans) and icons (Font Awesome) load from CDNs.
 
@@ -47,7 +49,7 @@ Works as-is on any static host:
   A project with no footage can use the `card-media-plain` treatment (a tinted
   panel with a Font Awesome glyph) instead of leaving an empty box.
 - **Content:** all text lives directly in `index.html` under clearly-labelled
-  sections (About, News, Publications, Projects, Experience, Honors, Education).
+  sections (About, News, Achievements, Publications, Projects, Experience, Education).
 - **Accent colour / fonts:** edit the CSS variables at the top of `style.css`.
 
 ## Analytics
